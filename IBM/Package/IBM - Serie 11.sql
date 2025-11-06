@@ -1,3 +1,15 @@
+-- Nueva tabla necesaria para guardar los errores
+CREATE TABLE error_proceso_unidad
+(
+    id_error NUMBER PRIMARY KEY,
+    codigo_oracle VARCHAR2(50) NOT NULL,
+    mensaje_oracle VARCHAR2(250) NOT NULL,
+    fecha_error DATE NOT NULL,
+    unidad_responsable VARCHAR2(50) NOT NULL
+);
+
+CREATE SEQUENCE SEQ_ERROR_UNIDAD START WITH 1;
+    
 -- Pacakage
 -- Encabezado 
 CREATE OR REPLACE PACKAGE pkg_reporte_unidad IS
